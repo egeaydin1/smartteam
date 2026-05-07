@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Dev / project files
+.env
+.env.*
+.git/
+.github/
+frontend/
+*.md
+
+# Misc
+.DS_Store

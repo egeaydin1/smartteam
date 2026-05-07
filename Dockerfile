@@ -5,10 +5,12 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
+# Install deps in a separate layer for Docker cache efficiency
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+# Copy application source (frontend/ and .venv/ are excluded via .dockerignore)
+COPY app/ app/
 
 EXPOSE 8000
 
